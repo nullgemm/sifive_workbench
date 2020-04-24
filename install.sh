@@ -23,4 +23,9 @@ rm $gcc.tar.gz
 rm $ocd.tar.gz
 rm boards
 
-git clone --recurse-submodules https://github.com/sifive/freedom-e-sdk.git
+git clone \
+	--branch master \
+	--recurse-submodules https://github.com/sifive/freedom-e-sdk.git
+
+export RISCV_OPENOCD_PATH=$(pwd)/riscv-openocd
+export RISCV_PATH=$(pwd)/riscv64-unknown-elf-gcc
